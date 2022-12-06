@@ -1,0 +1,232 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* Typography */
+
+:root {
+    --title: #FFD28C;
+    --span: #E49B58;
+    --text: #A2705E;
+    --titles: #524439;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 400;
+    color: #FFD28C;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 400;
+    color: #524439;
+}
+
+span {
+    color:#E49B58;
+}
+
+p {
+    font-size: 1.225rem;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+    color: #A2705E;
+}
+
+/* inputs */
+
+input {
+    border: none;
+
+    color: #FFF;
+    background: #FFD28C;
+
+    font-family: 'Patrick Hand', cursive;
+    font-size: 3rem;
+    text-align: center;
+
+    width: 100px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+
+[type=radio]:checked + img {
+    transform: scale(120%);
+}
+
+/* Buttons */
+
+button {
+    background-color: #FFD28C;
+    color: #FFF;
+
+    border: none;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 3rem;
+
+    width: 200px;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    transform: scale(115%);
+}
+
+button:active {
+    transform: scale(125%)
+  }
+
+/*  Styling  */
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.header {
+    margin: 2em 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title {
+    margin: 1em 0 0.5em;
+}
+
+.main__field {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 280px;
+    height: 120px;
+    background-color: #FFD28C;
+    border: #E49B58 solid 10px;
+    border-radius: 12px 9px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.animal {
+    margin: 5px;
+}
+
+.result__text {
+    margin: 0.25em;
+    padding: 1em;
+    display: none;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1;
+
+    background-color: #FFD28C;
+    border-radius: 50px;
+}
+
+.result__text.active {
+    display: block;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.result__number {
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.result {
+    margin-top: 3em;
+}
+
+.sub-btn {
+    margin: 3em;
+}
+
+@media (min-width: 700px) {
+    .header {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .logo {
+        transform: scale(250%);
+        margin-top: 1.5em;
+    }
+
+    .left {
+        margin-right: 40px;
+    }
+
+    .right {
+        margin-left: 40px;
+    }
+
+    .main__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__text p {
+        font-size: 2rem;
+        text-align: center;
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main__content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
